@@ -5,9 +5,9 @@
 // градусы Фаренгейта = (9 / 5) * градусы Цельсия + 32
 // Вывести в консоль температуру в Цельсиях и Фаренгейтах.
 
-const Cdeg = 10;
-const Fdeg = (9 / 5) * Cdeg + 32;
-console.log(Cdeg, Fdeg);
+const degC = 21;
+const degF = Math.round((9 / 5) * degC + 32);
+console.log(degC, degF);
 
 
 
