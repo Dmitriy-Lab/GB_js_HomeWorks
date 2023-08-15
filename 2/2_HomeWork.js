@@ -11,7 +11,7 @@
 // в консоль "Одно или более значений некорректно.".
 
 const positive = Number(prompt('Введите положительное число', 1));
-const negative = (prompt('Введите отрицательное число', -1))/1;
+const negative = Number(prompt('Введите отрицательное число', -1));
 // console.log(typeof positive, typeof negative);
 
 (positive > 0 && negative < 0) ? alert('Все значения верные.') : alert('Одно или более значений некорректно.');
@@ -30,9 +30,9 @@ const negative = (prompt('Введите отрицательное число',
 //     console.log("До свидания.");
 //   }
 
-  const test = confirm('У вас много денег?');
+const test = confirm('У вас много денег?');
 
-  (test) ?  console.log('Скоро будем у вас ;)') : console.log('До свидания.')
+(test) ? console.log('Скоро будем у вас ;)') : console.log('До свидания.')
 
 
 
@@ -49,17 +49,14 @@ const negative = (prompt('Введите отрицательное число',
 // Примечание: выражение [1, 32) означает от 1 включительно, до 32, не включая 
 // число 32.
 
-const dayNumber = prompt('Введите целое число от 1 до 31');
+const dayNumber = Number(prompt('Введите целое число от 1 до 31'));
 
-if (1 <= dayNumber && dayNumber <= 10) {
+if (dayNumber <= 1 && dayNumber <= 10) {
     alert(`Число ${dayNumber} попадает в 1 декаду месяца.`);
-
-} else if (11 <= dayNumber && dayNumber <= 20) {
+} else if (dayNumber <= 11 && dayNumber <= 20) {
     alert(`Число ${dayNumber} попадает во 2 декаду месяца.`);
-
-} else if (21 <= dayNumber && dayNumber < 32) {
+} else if (dayNumber <= 21 && dayNumber < 32) {
     alert(`Число ${dayNumber} попадает в 3 декаду месяца.`);
-
 } else {
     alert('Неверное значение');
 }
@@ -88,10 +85,10 @@ if (1 <= dayNumber && dayNumber <= 10) {
 // Уточнение: Пользователь всегда вводит корректное положительное целое число.
 // Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 
-const userNumber = prompt('Введите целое число:');
+const userNumber = Number(prompt('Введите целое число:'));
 
-const userNumberHundreds = Math.floor((userNumber % 1000)/100);
-const userNumberTens = Math.floor((userNumber % 100)/10) ;
+const userNumberHundreds = Math.floor((userNumber % 1000) / 100);
+const userNumberTens = Math.floor((userNumber % 100) / 10);
 const userNumberOnes = userNumber % 10;
 
-alert(`В числе ${userNumber} количество сотен: ${userNumberHundreds}, десятков: ${userNumberTens}, единиц: ${userNumberOnes}`)
+alert(`В числе ${userNumber} количество сотен: ${userNumberHundreds}, десятков: ${userNumberTens}, единиц: ${userNumberOnes}`);
