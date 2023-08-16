@@ -10,18 +10,12 @@
 три числа. Проверять их не нужно.
 */
 
-const userNumberOne = prompt('Введите первое число: ');
-const userNumberTwo = prompt('Введите второе число: ');
-const userNumberThree = prompt('Введите третье число: ');
+const userNumberOne = Number(prompt('Введите первое число: '));
+const userNumberTwo = Number(prompt('Введите второе число: '));
+const userNumberThree = Number(prompt('Введите третье число: '));
 
 const findMax = (numberOne, numberTwo, numberThree) => {
-    if (numberOne > numberTwo && numberOne > numberThree) {
-        return console.log(`Максимальное значение среди чисел ${numberOne}, ${numberTwo}, ${numberThree} равно ${numberOne}.`);
-    } else if (numberTwo > numberOne && numberTwo > numberThree) {
-        return console.log(`Максимальное значение среди чисел ${numberOne}, ${numberTwo}, ${numberThree} равно ${numberTwo}.`);
-    } else {
-        return console.log(`Максимальное значение среди чисел ${numberOne}, ${numberTwo}, ${numberThree} равно ${numberThree}.`);
-    }
+    return console.log(`Максимальное значение среди чисел ${numberOne}, ${numberTwo}, ${numberThree} равно ${Math.max(numberOne, numberTwo, numberThree)}.`);
 }
 
 findMax(userNumberOne, userNumberTwo, userNumberThree);

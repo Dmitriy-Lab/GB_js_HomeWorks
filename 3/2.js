@@ -9,14 +9,13 @@
 сообщение "Размер заработной платы за вычетом налогов равен N."
 */
 
-const userNumber = prompt('Введите число: ')
+const userNumber = Number(prompt('Введите число: '));
 
-if (Number.isFinite(userNumber)) {
-    function getPayroll (salary) {
-        salary = salary * 0.87;
-        console.log(`Размер заработной платы за вычетом налогов равен ${salary}.`);
-    };
-    getPayroll(userNumber);
+function getPayroll(salary) {
+if (Number.isFinite(salary)) {
+    console.log(`Размер заработной платы за вычетом налогов равен ${salary * 0.87}.`);
 } else {
     console.log('Значение задано неверно');
 }
+}
+getPayroll(userNumber);

@@ -18,7 +18,9 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 Демонстрировать работы функций не обязательно.
 */
 
-const getSum = (num1, num2) => { return num1 + num2; };
+const getSum = (num1, num2) => {
+    return num1 + num2;
+};
 const getDifference = (num1, num2) => {
     if (num1 >= num2) {
         return num1 - num2;
@@ -26,7 +28,9 @@ const getDifference = (num1, num2) => {
         return num2 - num1;
     }
 };
-const getMultiplication = (num1, num2) => { return num1 * num2; };
+const getMultiplication = (num1, num2) => {
+    return num1 * num2;
+};
 const getDivision = (num1, num2) => {
     if (num2 !== 0) {
         return num1 / num2;

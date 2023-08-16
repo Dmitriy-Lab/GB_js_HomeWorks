@@ -7,7 +7,7 @@
 который получаем от функции, в консоль.
 */
 
-function getCube (num) {
+function getCube(num) {
     return num ** 3;
 }
 
