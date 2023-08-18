@@ -18,5 +18,4 @@ for (let i = 0; i < 11; i++) {
     } else {
         console.log(`${i} – четное число`);
     }
-    
 }

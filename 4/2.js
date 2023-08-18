@@ -9,5 +9,4 @@
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
 
-const newArr = arr.slice(0,2);
-newArr.push(100, arr[5], arr[6]);
+arr.splice(2, 3, 100);

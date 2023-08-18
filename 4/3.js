@@ -15,8 +15,6 @@
 */
 const array = [];
 let count = 0;
-let minValue = Infinity;
-const indexOfArray = [];
 const getRandom = (min = 0, max = 9) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -26,9 +24,13 @@ for (let i = 0; i < 5; i++) {
     count += array[i];
 }
 
+let minValue;
+
 for (let i = 1; i < array.length; i++) {
     minValue = Math.min(array[i - 1], array[i])
 }
+
+const indexOfArray = [];
 
 for (let i = 0; i < array.length; i++) {
     if (array[i] === 3) {
